@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jquery.toggle-password</title>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script src="/jquery.toggle-password.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $("input#current_password")
+                    .togglePassword({ el: "input#toggle_current_password", ev: "click" });
+                $("input#new_password, input#new_password_confirmation")
+                    .togglePassword({ el: "button#toggle_password" });
+            });
+        </script>
+    </head>
+    <body>
+        <p>Current password</p>
+        <input type="password" id="current_password" />
+        <input type="checkbox" id="toggle_current_password" />
+        <label for="toggle_current_password">Show current password</label>
+
+        <p>New password twice</p>
+        <input type="password" id="new_password" />
+        <input type="password" id="new_password_confirmation" />
+        <button type="button" id="toggle_password">Show new password</button>
+
+        <p><a href="https://github.com/sensen/jquery.toggle-password">jquery.toggle-password</a></p>
+    </body>
+</html>
+
